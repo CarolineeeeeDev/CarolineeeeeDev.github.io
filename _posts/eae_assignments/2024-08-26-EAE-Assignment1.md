@@ -15,6 +15,8 @@ tags:
 
  [LehanLi_assignment01_direct3d.zip](\assets\eae\assignment1\LehanLi_assignment01_direct3d.zip) 
 
+ [LehanLi_assignment01_opengl.zip](\assets\eae\assignment1\LehanLi_assignment01_opengl.zip) 
+
 ## GIF of MyGame
 
 <img src="\assets\eae\assignment1\Gif for assignment01.gif" style="zoom:50%;" />
