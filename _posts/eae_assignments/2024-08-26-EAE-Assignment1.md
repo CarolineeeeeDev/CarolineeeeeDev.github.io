@@ -13,15 +13,15 @@ tags:
 
 ## Download Link
 
- [LehanLi_assignment01_direct3d.zip](assets\LehanLi_assignment01_direct3d.zip) 
+ [LehanLi_assignment01_direct3d.zip](\assets\eae\assignment1\LehanLi_assignment01_direct3d.zip) 
 
 ## GIF of MyGame
 
-<img src="assets\Gif for assignment01.gif" style="zoom:50%;" />
+<img src="\assets\eae\assignment1\Gif for assignment01.gif" style="zoom:50%;" />
 
 ## Generated Log File
 
-<img src="assets\2.png" alt="2" style="zoom:70%;" />
+<img src="\assets\eae\assignment1\2.png" alt="2" style="zoom:70%;" />
 
 ## Process of Completing Assignment01
 
@@ -31,7 +31,7 @@ I think the point of Assignment01 is to ..
 
 I created a new **static library project** under the Engine filter with files provided. By **modifying the "Excluded from build" property value** of files under "Direct3D" and "OpenGL" filters on both platforms separately, I made sure that I have the platform-specific files organized correctly, and that they are set to only build with the appropriate configuration.
 
-<img src="assets\1.png" alt="1" style="zoom:50%;" />
+<img src="\assets\eae\assignment1\1.png" alt="1" style="zoom:50%;" />
 
 ​								platform-specific files (under x64)
 
