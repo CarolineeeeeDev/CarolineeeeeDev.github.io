@@ -31,7 +31,7 @@ tags:
 
 I think the purpose of Assignment 01 is to understand the structure of the solution, create and integrate a static graphics library, and explore shader programming while ensuring cross-platform consistency. The assignment also emphasizes the importance of following best practices in version control. Below is a detailed account of how I completed the assignment.
 
-### 1. Implement Graphics Library
+### 1. Implement graphics library
 
 I began by creating a **static library project** under the Engine filter, using the files provided. To ensure platform-specific files were correctly organized and set to build only with the appropriate configuration, I modified the `Excluded from Build` property for files under the "Direct3D" and "OpenGL" filters on each platform.
 
