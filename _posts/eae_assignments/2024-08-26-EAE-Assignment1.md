@@ -55,13 +55,14 @@ To make animations...
 
 By using the **SetSimulationRate** function defined in iApplication class and getting realtime keyboard input in "cMyGame.cpp", I created several modes for my game:
 
-Press "Up" key: **Fast mode**;
+- Press "Up" key: **Fast mode**;
 
-Press "Down" key: **Slow mode**;
+- Press "Down" key: **Slow mode**;
 
-Press "Space" key: **Pause the game**;
+- Press "Space" key: **Pause the game**;
 
-Release all keys: **Regular mode**.
+- Release all keys: **Regular mode**.
+
 
 The point of doing this is to set different **m_simulationRate** value:
 
