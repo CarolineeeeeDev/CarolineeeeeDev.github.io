@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        "GameEngineArchitecture"
+title:        "Game Engine Architecture"
 author:       "Caroline飘小蝎"
 header-style: text
 catalog:      true
