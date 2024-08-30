@@ -9,6 +9,7 @@ tags:
     - Assignment
     - C++
     - Game Engine
+    - English
 ---
 
 ## Download Link
@@ -43,6 +44,8 @@ Additionally, I configured the path for the `Forced Include File`in the Graphics
 
 I ensured that all necessary references were added, and the build order was correct. This step was crucial in making sure that the projects were properly linked and would build in the correct sequence.
 
+The way I made sure what references a project would have is to check the header files that a project includes in all its `.cpp` files and `.h` files. For example, if one project has `#include <Engine/UserInput/...>` in its source code, I will add UserInput in its **References**.
+
 ### 3. Get my personal game project working
 
 After copying and modifying the configurations of the example game project, I successfully set up my personal game project, which displayed a white triangle upon startup.
@@ -58,6 +61,10 @@ I customized my game’s window name and class name in the `cMyGame.h` file and 
 ### 5. Add logging messages
 
 To track the game's initialization and cleanup processes, I added the **`OutputMessage`** function from the Logging class to the `Initialize` and `CleanUp` functions in `cMyGame.cpp`. This logging ensured that important events were recorded, aiding in debugging and tracking the game’s lifecycle.
+
+### 6. Ensure everything works well
+
+I delete the temp/ folder, build only my game and the BuildMyGameAssets projects, and run the game. Everything works correctly. 
 
 ## Optional Challenges
 
