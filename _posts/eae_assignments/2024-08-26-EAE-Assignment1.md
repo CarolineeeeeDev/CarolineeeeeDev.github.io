@@ -26,6 +26,8 @@ tags:
 
 <img src="\assets\eae\assignment1\2.png" alt="2" style="zoom:70%;" />
 
+I added extra logs when MyGame has been initialized and cleaned up.
+
 ## Process of Completing Assignment01
 
 ### Overview
@@ -34,23 +36,27 @@ I think the purpose of Assignment 01 is to understand the structure of the solut
 
 ### 1. Implement graphics library
 
-I began by creating a **static library project** under the Engine filter, using the files provided. To ensure platform-specific files were correctly organized and set to build only with the appropriate configuration, I modified the `Excluded from Build` property for files under the "Direct3D" and "OpenGL" filters on each platform.
+I began by creating a **static library project** under the Engine filter, using the files provided. To ensure platform-specific files were correctly organized and set to build only with the appropriate configuration, I modified the `Excluded from Build` property for files under the "Direct3D" and "OpenGL" filters on each platform. In this way, Direct3D files will only be built under win64 platform, and OpenGL files will only be built under win32 platform, which solves the problem of muti-definition.
 
 <img src="\assets\eae\assignment1\1.png" alt="1" style="zoom:50%;" />
 
-Additionally, I configured the path for the `Forced Include File`in the Graphics project to ensure both Direct3D and OpenGL would function correctly.
+Additionally, I configured the path for the `Forced Include File` in the Graphics project to ensure both Direct3D and OpenGL would function correctly using static libraries under the External folder.
 
-### 2. Set references and correct build orderss
+### 2. Set references and correct build orders
 
 I ensured that all necessary references were added, and the build order was correct. This step was crucial in making sure that the projects were properly linked and would build in the correct sequence.
 
 The way I made sure what references a project would have is to check the header files that a project includes in all its `.cpp` files and `.h` files. For example, if one project has `#include <Engine/UserInput/...>` in its source code, I will add UserInput in its **References**.
 
+When adding Graphics to references of other projects, I also searched "Graphics::" in entire solution to figure out what projects are using this class. 
+
 ### 3. Get my personal game project working
 
 After copying and modifying the configurations of the example game project, I successfully set up my personal game project, which displayed a white triangle upon startup.
 
-To animate the triangle's color, I added code in the `animatedColor.shader` file. By using `sin` and `cos` functions to update the values of `o_color.r`, `o_color.g`, and `o_color.b`, I created a dynamic color change in real-time.
+To animate the triangle's color, I added code in the `animatedColor.shader` file. By using `sin` and `cos` functions to update the values of `o_color.r`, `o_color.g`, and `o_color.b`, I created a dynamic color change in real-time. I added following codes both in Direct3D's main function and in OpenGL's main function in the shader file to make sure the animation works in both platforms.
+
+<img src="\assets\eae\assignment1\4.png" alt="4" style="zoom:60%;" />
 
 ### 4. Modify cMyGame.h configuration
 
@@ -99,4 +105,4 @@ Through this assignment, I have gained a deeper understanding of the structure o
 
 ## Time Cost
 
-I spent approximately 8 hours on this project, with the majority of the time dedicated to understanding and correctly setting the build order.
+I spent approximately 9 hours on this project, with the majority of the time dedicated to understanding and correctly setting the build order.
