@@ -12,9 +12,8 @@ tags:
 
 参考资料：
 
-[Unreal5.2 程序化自动生成合集](https://space.bilibili.com/355571550/channel/collectiondetail?sid=1331617)
-
-[UE5_PCG和Landscape配合](https://www.bilibili.com/video/BV1Hk4y137Y6/?spm_id_from=333.337.search-card.all.click)
+- [Unreal5.2 程序化自动生成合集](https://space.bilibili.com/355571550/channel/collectiondetail?sid=1331617)
+- [UE5_PCG和Landscape配合](https://www.bilibili.com/video/BV1Hk4y137Y6/?spm_id_from=333.337.search-card.all.click)
 
 ## 插件应用
 
