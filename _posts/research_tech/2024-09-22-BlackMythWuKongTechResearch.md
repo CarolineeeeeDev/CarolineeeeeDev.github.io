@@ -36,6 +36,6 @@ tags:
 
 显卡，CPU，内存
 
-
+[《黑神话：悟空》显卡性能推荐设置](https://docs.google.com/document/d/1K54_-oVJInqYUyq6lt8ZUsD1ngGAwitC/edit?usp=sharing&ouid=103940592075181033396&rtpof=true&sd=true)
 
 超分技术：DLSS，TSR，FSR
