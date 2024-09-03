@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        "Unreal程序化自动生成地图"
+title:        "Unreal程序化自动生成地图（PCG）"
 author:       "Caroline飘小蝎"
 header-style: text
 catalog:      true
@@ -30,7 +30,7 @@ tags:
 
 **PCG Graph**：PCG 贴图
 
-<img src="\assets\Unreal\PCG\P1\3.png" style="zoom:50%;" />
+<img src="\assets\Unreal\PCG\P1\3.png" style="zoom:80%;" />
 
 ### Surface Sampler
 
@@ -42,25 +42,23 @@ tags:
 
 <img src="\assets\Unreal\PCG\P1\5.png" style="zoom:50%;" />
 
-<img src="\assets\Unreal\PCG\P1\6.png" style="zoom:50%;" />
-
-**Points Per Squared Meter**：每平方米的采样点数量
-
-**Looseness**：采样点之间的边界大小
-
-**Seed**：随机数种子，改变每个点的density
-
-**Unbounded**：不局限，在整个地图生成
-
-Density：黑色为0，白色为1
-
-### TransformPoints
-
-<img src="\assets\Unreal\PCG\P1\7.png" style="zoom:50%;" />
+<img src="\assets\Unreal\PCG\P1\6.png" style="zoom:80%;" />
 
 参数：
 
-<img src="\assets\Unreal\PCG\P1\8.png" style="zoom:50%;" />
+- **Points Per Squared Meter**：每平方米的采样点数量
+- **Looseness**：采样点之间的边界大小
+- **Seed**：随机数种子，改变每个点的density
+- **Unbounded**：不局限，在整个地图生成
+- Density：黑色为0，白色为1
+
+### TransformPoints
+
+<img src="\assets\Unreal\PCG\P1\7.png" style="zoom:80%;" />
+
+参数：
+
+<img src="\assets\Unreal\PCG\P1\8.png" style="zoom:80%;" />
 
 效果：
 
@@ -68,13 +66,13 @@ Density：黑色为0，白色为1
 
 ### StaticMeshSpawner
 
-<img src="\assets\Unreal\PCG\P1\10.png" style="zoom:50%;" />
+<img src="\assets\Unreal\PCG\P1\10.png" style="zoom:80%;" />
 
-Weight：权重
+- **Weight**：权重
 
 在MeshEntries中添加三个StaticMesh作为程序化生成的物体：
 
-<img src="\assets\Unreal\PCG\P1\11.png" style="zoom:50%;" />
+<img src="\assets\Unreal\PCG\P1\11.png" style="zoom:80%;" />
 
 效果：
 
