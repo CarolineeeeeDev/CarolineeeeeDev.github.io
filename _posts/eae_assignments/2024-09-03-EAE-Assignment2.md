@@ -14,9 +14,9 @@ tags:
 
 ## Download Link
 
- [LehanLi_assignment01_direct3d.zip](\assets\eae\assignment1\LehanLi_assignment01_direct3d.zip) 
+ [LehanLi_assignment02_direct3d.zip](\assets\eae\assignment2\LehanLi_assignment02_direct3d.zip) 
 
- [LehanLi_assignment01_opengl.zip](\assets\eae\assignment1\LehanLi_assignment01_opengl.zip) 
+ [LehanLi_assignment02_opengl.zip](\assets\eae\assignment2\LehanLi_assignment02_opengl.zip) 
 
 ## GIF of MyGame
 
