@@ -24,17 +24,21 @@ tags:
 
 ## Screenshots from a Direct3D GPU Capture
 
-<img src="\assets\eae\assignment2\1.png" style="zoom:80%;" />
+<img src="\assets\eae\assignment2\1.png" style="zoom:100%;" />
 
-<img src="\assets\eae\assignment2\2.png" style="zoom:80%;" />
+<img src="\assets\eae\assignment2\2.png" style="zoom:100%;" />
 
 ## Screenshots from an OpenGL GPU Capture
 
-<img src="\assets\eae\assignment2\3.png" style="zoom:80%;" />
+<img src="\assets\eae\assignment2\3.png" style="zoom:100%;" />
 
-<img src="\assets\eae\assignment2\4.png" style="zoom:80%;" />
+<img src="\assets\eae\assignment2\4.png" style="zoom:100%;" />
 
-<img src="\assets\eae\assignment2\5.png" style="zoom:80%;" />
+<img src="\assets\eae\assignment2\5.png" style="zoom:100%;" />
+
+## The Code That Binds the Effect and Draws the Mesh
+
+<img src="\assets\eae\assignment2\6.png" style="zoom:50%;" />
 
 ## Process of Completing Assignment02
 
