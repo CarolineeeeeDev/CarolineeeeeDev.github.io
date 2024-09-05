@@ -46,6 +46,22 @@ tags:
 
 
 
+### 1. Create class for mesh and effect
+
+
+
+### 2. Platform-Independent Interfaces
+
+
+
+### 3. Platform-specified implementation
+
+
+
+### 4. GPU capture
+
+
+
 ## Remaining Differences
 
 
