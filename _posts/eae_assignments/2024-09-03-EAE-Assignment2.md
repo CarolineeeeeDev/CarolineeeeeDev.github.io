@@ -44,3 +44,27 @@ tags:
 
 ### Overview
 
+
+
+## Remaining Differences
+
+
+
+## Optional Challenges
+
+I made a house shape with 3 triangles.
+
+<img src="\assets\eae\assignment2\7.png" style="zoom:50%;" />
+
+| VertexIndex | VertexPosition (D3D) |
+| ----------- | -------------------- |
+| 0           | (-0.5, 0, 0)         |
+| 1           | (0, 0.5, 0)          |
+| 2           | (0.5, 0, 0)          |
+| 3           | (-0.3, -0.5, 0)      |
+| 4           | (-0.3, 0, 0)         |
+| 5           | (0.3, 0, 0)          |
+| 6           | (-0.3, -0.5, 0)      |
+| 7           | (0.3, 0, 0)          |
+| 8           | (0.3, -0.5, 0)       |
+
