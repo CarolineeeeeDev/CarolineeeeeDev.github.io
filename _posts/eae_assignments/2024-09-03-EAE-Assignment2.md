@@ -22,6 +22,20 @@ tags:
 
 <img src="\assets\eae\assignment2\Assignment02.gif" style="zoom:50%;" />
 
+## Screenshots from a Direct3D GPU Capture
+
+<img src="\assets\eae\assignment2\1.png" style="zoom:80%;" />
+
+<img src="\assets\eae\assignment2\2.png" style="zoom:80%;" />
+
+## Screenshots from an OpenGL GPU Capture
+
+<img src="\assets\eae\assignment2\3.png" style="zoom:80%;" />
+
+<img src="\assets\eae\assignment2\4.png" style="zoom:80%;" />
+
+<img src="\assets\eae\assignment2\5.png" style="zoom:80%;" />
+
 ## Process of Completing Assignment02
 
 ### Overview
