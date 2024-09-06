@@ -64,21 +64,21 @@ I spent some time learning how to use the GPU capture tool to debug graphics pro
 
 There are still some  remaining differences between Graphics.d3d.cpp and Graphics.gl.cpp.
 
-1. **Render Target View and Depth/Stencil View**
+**1.Render Target View and Depth/Stencil View**
 
 - **Direct3D**: `s_renderTargetView` and `s_depthStencilView` are used to bind the framebuffer and depth buffer for rendering. These are specific to Direct3D's way of handling render targets and depth/stencil buffers. The code calls `CreateRenderTargetView` and `CreateDepthStencilView` for setting up these resources.
 - **OpenGL**: There is no explicit render target view, as OpenGL handles this with the default framebuffer, and depth buffer is managed via `glClearDepth()`.
 
 **Solution**: To make this platform-independent, I could abstract the framebuffer and depth buffer logic into platform-specific setup functions. These could be called from a unified cpp file, which would delegate the setup to InitializeRenderTargets() or similar platform-specific functions.
 
-2. **Constant Buffers (Uniform Buffers)**
+**2.Constant Buffers (Uniform Buffers)**
 
 - **Direct3D**: Constant buffers are handled explicitly using `ID3D11Buffer` and `UpdateSubresource()` for transferring data to the GPU.
 - **OpenGL**: OpenGL uses `glUniform` to update shader variables or `glBufferData` for uniform buffers.
 
 **Solution**: Abstract the constant buffer handling into a platform-independent function like `UpdateConstantBuffer()`, with platform-specific code in `d3d` and `gl` files. The platform-independent interface would manage the API differences.
 
-3. **Resource Creation (Textures, Buffers)**
+**3.Resource Creation (Textures, Buffers)**
 
 - **Direct3D**: The creation of resources like vertex buffers, textures, and render target views is explicit, using methods such as `CreateBuffer()` and `CreateRenderTargetView()`.
 - **OpenGL**: OpenGL uses `glGenBuffers()`, `glBindBuffer()`, etc., for resource creation.
