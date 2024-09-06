@@ -16,7 +16,7 @@ tags:
 
 ## 学习大纲
 
-<img src="\assets\Unreal\GAS\0.png" style="zoom:50%;" />
+<img src="\assets\Unreal\GAS\1.png" style="zoom:50%;" />
 
 ## 插件应用
 
