@@ -62,10 +62,8 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engi
 
 ### 项目配置
 
-在Project Settings中关闭自动曝光（Auto Exposure）
-
-创建BaseCharacter (C++), BP_BaseCharacter, BP_Player, BP_Enemy, BP_GameMode, BP_PlayerController
-
-在BP_Player中新增SpringArm和Camera
+- 在Project Settings中关闭自动曝光（Auto Exposure）
+- 创建BaseCharacter (C++), BP_BaseCharacter, BP_Player, BP_Enemy, BP_GameMode, BP_PlayerController
+- 在BP_Player中新增SpringArm和Camera
 
 ## 基本角色与相机控制
