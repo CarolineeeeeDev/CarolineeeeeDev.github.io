@@ -190,3 +190,35 @@ ABP_Sinbi
 在AnimGraph中实现是否需要Move蒙太奇的切换实现
 
 <img src="\assets\Unreal\GAS\27.png" style="zoom:60%;" />
+
+## 创建一个平A及CD
+
+### 添加AbilitySystemComponent和GameplayAbility基类
+
+在BP_BaseCharacter上新增Ability System这个Component
+
+创建GAB_BaseAbility（父类是GameAbility）以及GAB_MeleeAttack（父类是GAB_BaseAbility），并给后者增加标签
+
+<img src="\assets\Unreal\GAS\28.png" style="zoom:40%;" />
+
+### GAS结合gameplay的做法
+
+在BP_BaseCharacter中新增触发技能函数ActivateAbility，并在Gameplay Tag Container中配置所有的Tag
+
+<img src="\assets\Unreal\GAS\29.png" style="zoom:60%;" />
+
+在BP_BaseCharacter开始的时候执行GiveAbility
+
+<img src="\assets\Unreal\GAS\30.png" style="zoom:40%;" />
+
+<img src="\assets\Unreal\GAS\31.png" style="zoom:40%;" />
+
+在GAB_MeleeAttack中实现蒙太奇的播放
+
+<img src="\assets\Unreal\GAS\33.png" style="zoom:50%;" />
+
+注意：子类BP_Player的BeginPlay一定要继承父类的方法（即GiveAbility），否则动画无法正常生效
+
+<img src="\assets\Unreal\GAS\32.png" style="zoom:40%;" />
+
+### 平A检测打到谁了
