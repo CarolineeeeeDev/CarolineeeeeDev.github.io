@@ -233,7 +233,7 @@ ABP_Sinbi
 
 <img src="\assets\Unreal\GAS\35.png" style="zoom:50%;" />
 
-### 平A检测打到谁了
+### 平A碰撞检测
 
 在BP_BaseCharacter的Mesh下新增胶囊体碰撞，并设置Parent Socket为weapon_r，调整位置及大小
 
@@ -255,7 +255,9 @@ ABP_Sinbi
 
 <img src="\assets\Unreal\GAS\40.png" style="zoom:75%;" />
 
-## 创建角色属性
+## 角色属性
+
+### 创建角色属性
 
 创建BaseAttributeSet（C++，父类为AttributeSet）
 
@@ -307,3 +309,46 @@ public:
 };
 ```
 
+### 初始化属性值并给予普攻伤害
+
+创建DT_CharacterAttribute（Row元素类型为AttributeMetaData）
+
+<img src="\assets\Unreal\GAS\41.png" style="zoom:75%;" />
+
+并将这张数据表设置在BP_BaseCharacter的AbilitySystem的AttributeTest中
+
+新建GE_Melee_Damage（基类为GameplayEffect）作为普攻伤害，配置好属性值
+
+<img src="\assets\Unreal\GAS\42.png" style="zoom:75%;" />
+
+在检测碰撞处加上伤害的GameEffect
+
+<img src="\assets\Unreal\GAS\43.png" style="zoom:50%;" />
+
+### 夹值处理
+
+为了避免属性值低于最小值或高于最大值，需要进行夹值处理
+
+<img src="\assets\Unreal\GAS\44.png" style="zoom:60%;" />
+
+### 镜头处理（碰撞、延迟跟随）
+
+将BP_Player上的SpringArm中的DoCollisionTest取消勾选，EnableCameraLag勾选
+
+### 不同等级伤害配表
+
+创建MeleeDamageLevel.cvs文件，配置好数值后导入ue，选择为CurveTable和Constant
+
+<img src="\assets\Unreal\GAS\45.png" style="zoom:60%;" />
+
+<img src="\assets\Unreal\GAS\46.png" style="zoom:50%;" />
+
+在GE_Melee_Damage中运用这个表
+
+<img src="\assets\Unreal\GAS\47.png" style="zoom:50%;" />
+
+在ApplyGE的时候运用等级
+
+<img src="\assets\Unreal\GAS\48.png" style="zoom:50%;" />
+
+## 敌人行为树
