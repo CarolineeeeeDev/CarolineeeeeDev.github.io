@@ -242,3 +242,21 @@ ABP_Sinbi
 碰撞逻辑实现：
 
 <img src="\assets\Unreal\GAS\37.png" style="zoom:75%;" />
+
+解决不在攻击时仍然判定伤害的bug：
+
+增加StartATK和EndATK的Notify
+
+<img src="\assets\Unreal\GAS\38.png" style="zoom:75%;" />
+
+<img src="\assets\Unreal\GAS\39.png" style="zoom:75%;" />
+
+改变BP_BaseCharacter的碰撞设置
+
+<img src="\assets\Unreal\GAS\40.png" style="zoom:75%;" />
+
+## 创建角色属性
+
+创建BaseAttributeSet（C++，父类为AttributeSet）
+
+<img src="\assets\Unreal\GAS\41.png" style="zoom:75%;" />
