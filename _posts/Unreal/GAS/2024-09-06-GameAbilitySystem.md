@@ -207,11 +207,13 @@ ABP_Sinbi
 
 <img src="\assets\Unreal\GAS\29.png" style="zoom:60%;" />
 
+用触发技能函数实现MeleeAttack Event
+
+<img src="\assets\Unreal\GAS\31.png" style="zoom:40%;" />
+
 在BP_BaseCharacter开始的时候执行GiveAbility
 
 <img src="\assets\Unreal\GAS\30.png" style="zoom:40%;" />
-
-<img src="\assets\Unreal\GAS\31.png" style="zoom:40%;" />
 
 在GAB_MeleeAttack中实现蒙太奇的播放
 
