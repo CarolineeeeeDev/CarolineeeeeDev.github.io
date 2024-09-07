@@ -313,7 +313,7 @@ public:
 
 创建DT_CharacterAttribute（Row元素类型为AttributeMetaData）
 
-<img src="\assets\Unreal\GAS\41.png" style="zoom:75%;" />
+<img src="\assets\Unreal\GAS\41.png" style="zoom:70%;" />
 
 并将这张数据表设置在BP_BaseCharacter的AbilitySystem的AttributeTest中
 
