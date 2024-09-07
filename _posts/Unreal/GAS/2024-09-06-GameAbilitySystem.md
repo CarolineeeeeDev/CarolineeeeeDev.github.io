@@ -177,7 +177,7 @@ ABP_Sinbi
 
 但存在问题：效果像是在腰部被切断一样
 
-解决方法：在前几帧将动画控制权交给平A
+解决方法：在前几帧将动画控制权交给未融合的Montage
 
 在脚离地及落地的时候分别**Add Notify**，对应StartMontage和EndMontage
 
