@@ -89,7 +89,7 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engi
 
 <img src="\assets\Unreal\GAS\5.png" style="zoom:80%;" />
 
-### 平A与移动动画制作与融合
+### 平A与移动动画制作
 
 动画制作：创建BlendSpace和AnimationBlueprint
 
@@ -155,8 +155,38 @@ JumpEnd to Idle/Jog
 
 在BP_BaseEnemy中创建CustomEvent
 
-<img src="\assets\Unreal\GAS\21.png" style="zoom:75%;" />
+<img src="\assets\Unreal\GAS\21.png" style="zoom:50%;" />
 
 再在PlayerController中调用这个Event
 
 <img src="\assets\Unreal\GAS\22.png" style="zoom:60%;" />
+
+目前存在的问题：边走边平A的时候腿部不动，非常违和
+
+解决方法：动作融合
+
+### 动画融合
+
+ABP_Sinbi
+
+<img src="\assets\Unreal\GAS\23.png" style="zoom:60%;" />
+
+并在Layered Blend per bone设置：
+
+<img src="\assets\Unreal\GAS\24.png" style="zoom:60%;" />
+
+但存在问题：效果像是在腰部被切断一样
+
+解决方法：在前几帧将动画控制权交给平A
+
+在脚离地及落地的时候分别**Add Notify**，对应StartMontage和EndMontage
+
+<img src="\assets\Unreal\GAS\25.png" style="zoom:60%;" />
+
+在ABP_Sinbi的Event Graph中增加是否需要Move蒙太奇的设置
+
+<img src="\assets\Unreal\GAS\26.png" style="zoom:60%;" />
+
+在AnimGraph中实现是否需要Move蒙太奇的切换实现
+
+<img src="\assets\Unreal\GAS\27.png" style="zoom:60%;" />
