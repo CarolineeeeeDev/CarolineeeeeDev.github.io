@@ -223,7 +223,7 @@ ABP_Sinbi
 
 <img src="\assets\Unreal\GAS\32.png" style="zoom:40%;" />
 
-### CD设置
+### 平A的CD设置
 
 新增GE_MeleeCD（父类是GameEffect）并配置0.5s的CD时间
 
@@ -234,3 +234,11 @@ ABP_Sinbi
 <img src="\assets\Unreal\GAS\35.png" style="zoom:50%;" />
 
 ### 平A检测打到谁了
+
+在BP_BaseCharacter的Mesh下新增胶囊体碰撞，并设置Parent Socket为weapon_r，调整位置及大小
+
+<img src="\assets\Unreal\GAS\36.png" style="zoom:75%;" />
+
+碰撞逻辑实现：
+
+<img src="\assets\Unreal\GAS\37.png" style="zoom:75%;" />
