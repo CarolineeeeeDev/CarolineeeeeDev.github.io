@@ -221,4 +221,14 @@ ABP_Sinbi
 
 <img src="\assets\Unreal\GAS\32.png" style="zoom:40%;" />
 
+### CD设置
+
+新增GE_MeleeCD（父类是GameEffect）并配置0.5s的CD时间
+
+<img src="\assets\Unreal\GAS\34.png" style="zoom:50%;" />
+
+注意还需要在GAB_MeleeAttack中提交CD
+
+<img src="\assets\Unreal\GAS\35.png" style="zoom:50%;" />
+
 ### 平A检测打到谁了
