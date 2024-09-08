@@ -179,7 +179,7 @@ ABP_Sinbi
 
 解决方法：在前几帧将动画控制权交给未融合的Montage
 
-在脚离地及落地的时候分别**Add Notify**，对应StartMontage和EndMontage
+在脚离地及落地的时候分别Add Notify，对应StartMontage和EndMontage
 
 <img src="\assets\Unreal\GAS\25.png" style="zoom:60%;" />
 
@@ -195,7 +195,7 @@ ABP_Sinbi
 
 ### 添加AbilitySystemComponent和GameplayAbility基类
 
-在BP_BaseCharacter上新增Ability System这个Component
+在BP_BaseCharacter上新增`Ability System`这个Component
 
 创建GAB_BaseAbility（父类是GameAbility）以及GAB_MeleeAttack（父类是GAB_BaseAbility），并给后者增加标签
 
@@ -235,7 +235,7 @@ ABP_Sinbi
 
 ### 平A碰撞检测
 
-在BP_BaseCharacter的Mesh下新增胶囊体碰撞，并设置Parent Socket为weapon_r，调整位置及大小
+在BP_BaseCharacter的Mesh下新增胶囊体碰撞，并设置`Parent Socket`为weapon_r，调整位置及大小
 
 <img src="\assets\Unreal\GAS\36.png" style="zoom:75%;" />
 
@@ -333,11 +333,11 @@ public:
 
 ### 镜头处理（碰撞、延迟跟随）
 
-将BP_Player上的SpringArm中的DoCollisionTest取消勾选，EnableCameraLag勾选
+将BP_Player上的SpringArm中的`DoCollisionTest`取消勾选，`EnableCameraLag`勾选
 
 ### 不同等级伤害配表
 
-创建MeleeDamageLevel.cvs文件，配置好数值后导入ue，选择为CurveTable和Constant
+创建MeleeDamageLevel.cvs文件，配置好数值后导入UE，选择为CurveTable和Constant
 
 <img src="\assets\Unreal\GAS\45.png" style="zoom:60%;" />
 
@@ -352,3 +352,25 @@ public:
 <img src="\assets\Unreal\GAS\48.png" style="zoom:50%;" />
 
 ## 敌人行为树
+
+创建行为树BT_Behaviour及黑板BBP_Value，在行为树中新建BTT_FindPlayer和BTT_AttackMelee的Task
+
+<img src="\assets\Unreal\GAS\49.png" style="zoom:50%;" />
+
+在黑板中新建`Player`属性
+
+<img src="\assets\Unreal\GAS\50.png" style="zoom:50%;" />
+
+配置BTT_FindPlayer
+
+<img src="\assets\Unreal\GAS\51.png" style="zoom:70%;" />
+
+取消MoveTo节点中AllowPatialPath的勾选，并将`BlackBoardKey`设置为Player，将BTT_FindPlayer节点中的`Player`也设置为Player
+
+新建BP_AIController（基类为AIController），在EventBeginPlay时执行行为树
+
+在游戏场景中增加导航网格NavMesh，按P键显示
+
+<img src="\assets\Unreal\GAS\52.png" style="zoom:70%;" />
+
+在BP_Enemy的`AIControllerClass`中配置BP_AIController，将`AutoPossessAI`属性值设置为Placed In World or Spawned
