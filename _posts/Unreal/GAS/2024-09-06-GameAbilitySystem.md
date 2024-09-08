@@ -353,7 +353,7 @@ public:
 
 ## 敌人行为树
 
-创建行为树BT_Behaviour及黑板BBP_Value，在行为树中新建BTT_FindPlayer和BTT_AttackMelee的Task
+创建行为树BT_Behaviour及黑板BBP_Value，在行为树中新建BTT_FindPlayer和BTT_AttackMelee的Task，把Wait时间改成1s
 
 <img src="\assets\Unreal\GAS\49.png" style="zoom:50%;" />
 
@@ -364,6 +364,10 @@ public:
 配置BTT_FindPlayer
 
 <img src="\assets\Unreal\GAS\51.png" style="zoom:70%;" />
+
+配置BTT_AttackMelee
+
+<img src="\assets\Unreal\GAS\53.png" style="zoom:70%;" />
 
 取消MoveTo节点中AllowPatialPath的勾选，并将`BlackBoardKey`设置为Player，将BTT_FindPlayer节点中的`Player`也设置为Player
 
