@@ -378,3 +378,55 @@ public:
 <img src="\assets\Unreal\GAS\52.png" style="zoom:70%;" />
 
 在BP_Enemy的`AIControllerClass`中配置BP_AIController，将`AutoPossessAI`属性值设置为Placed In World or Spawned
+
+## 生命值变化时进行广播
+
+### 多播委托参数
+
+使用多播动态委托的原因：多播委托所带的dynamic的才能被蓝图调用
+
+```c++
+//BasicCharacter.h
+#include "GameplayEffectTypes.h"
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnHealthChangeEvent, float, NewValue);
+
+class UNREALGAS_API ABaseCharacter : public ACharacter
+{
+    UPROPERTY(BlueprintAssignable, Category = "Ability")
+	FOnHealthChangeEvent HPChangeEvent;
+    
+    void OnHealthAttributeChanged(const FOnAttributeChangeData& Data);
+}
+```
+
+```c++
+//BasicCharacter.cpp
+#include "AbilitySystemComponent.h"
+#include "BaseAttributeSet.h"
+
+void ABaseCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	UAbilitySystemComponent* MyAbilitySystemComponent = this->FindComponentByClass<UAbilitySystemComponent>();
+	if (MyAbilitySystemComponent)//如果存在
+	{
+		MyAbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(UBaseAttributeSet::GetHPAttribute()).AddUObject(this, &ABaseCharacter::OnHealthAttributeChanged);
+	}
+}
+
+void ABaseCharacter::OnHealthAttributeChanged(const FOnAttributeChangeData& Data)
+{
+	HPChangeEvent.Broadcast(Data.NewValue);//广播参数
+}
+```
+
+在蓝图中调用
+
+<img src="\assets\Unreal\GAS\54.png" style="zoom:50%;" />
+
+### 死亡动画
+
+创建死亡的蒙太奇MA_Dead
+
+<img src="\assets\Unreal\GAS\55.png" style="zoom:50%;" />
