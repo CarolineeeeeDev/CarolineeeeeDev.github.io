@@ -48,9 +48,8 @@ I used **Vertex Shader Path** and **Fragment Shader Path** as parameters to init
 
 ## Memory a single effect takes up in both platforms
 
-**x64:** 48
-
-**x86:** 16
+- **x64:** 48
+- **x86:** 16
 
 <img src="\assets\eae\assignment3\5.png" style="zoom:100%;" />
 
@@ -58,13 +57,12 @@ I used **Vertex Shader Path** and **Fragment Shader Path** as parameters to init
 
 <img src="\assets\eae\assignment3\6.png" style="zoom:100%;" />
 
-I used TriangleCount, VertexCountPerTriangle and VertexData as parameters to initialize a mesh.
+I used **TriangleCount**, **VertexCountPerTriangle** and **VertexData** as parameters to initialize a mesh.
 
 ## Memory a single mesh takes up in both platforms
 
-**x64:** 24
-
-**x86:** 12
+- **x64:** 24
+- **x86:** 12
 
 <img src="\assets\eae\assignment3\4.png" style="zoom:100%;" />
 
