@@ -68,5 +68,18 @@ I used **TriangleCount**, **VertexCountPerTriangle** and **VertexData** as param
 
 
 
+The size differences between platforms arise from:
+
+1. **Pointer Size Variation:**
+   - On different platforms (32-bit vs. 64-bit), pointers have different sizes (4 bytes vs. 8 bytes).
+2. **Platform-Specific Data Structures:**
+   - Different platforms use different types for handling resources (e.g., pointers vs. IDs), leading to variations in data representation and storage.
+3. **Additional Platform-Specific Data:**
+   - Additional platform-specific members (like `m_vertexArrayId` in OpenGL) increase the memory footprint.
+
+These variations are necessary to interface correctly with the different graphics APIs (Direct3D vs. OpenGL) and cannot be uniformly minimized without compromising functionality or compatibility.
+
+
+
 ## Optional Challenges
 
