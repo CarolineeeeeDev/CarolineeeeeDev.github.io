@@ -83,3 +83,4 @@ These variations are necessary to interface correctly with the different graphic
 
 ## Optional Challenges
 
+<img src="\assets\eae\assignment3\1.png" style="zoom:100%;" />
