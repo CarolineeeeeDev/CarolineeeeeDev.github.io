@@ -43,9 +43,13 @@ tags:
 
 <img src="\assets\eae\assignment4\4.png" style="zoom:80%;" />
 
+This uses the sine function (`std::sin`) to generate smoothly varying values between 0 and 1 for each color channel. Once the red, green, and blue values are calculated, they are submitted to the graphics engine by calling `Graphics::SubmitBackgroundColor`. In the `SubmitBackgroundColor` function, the submitted color is written into a shared data structure that the rendering system uses.
+
 ## The code that submits a mesh/effect pair to be drawn
 
 <img src="\assets\eae\assignment4\5.png" style="zoom:80%;" />
+
+The function `eae6320::Graphics::BindEffectToMesh(cMesh*& mesh, cEffect*& effect)` handles submitting a mesh and effect pair to the rendering system. After the null checks, it accesses `s_dataBeingSubmittedByApplicationThread`, which is a shared data structure used to store data submitted by the application thread for rendering. This data will be processed by the rendering thread later.
 
 ## Why we have to submit things this way
 
