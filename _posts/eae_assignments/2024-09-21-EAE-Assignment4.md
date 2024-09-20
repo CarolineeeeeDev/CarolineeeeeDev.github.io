@@ -22,6 +22,9 @@ tags:
 
 <img src="\assets\eae\assignment4\Assignment04.gif" style="zoom:50%;" />
 
+- When I press "left arrow key", the second mesh will not be drawn.
+- When I press "right arrow key", the second mesh will be bind to the animated color effect.
+
 
 
 ## Optional Challenges
