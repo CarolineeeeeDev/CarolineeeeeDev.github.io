@@ -82,3 +82,26 @@ This class, `cEffect`, cannot be meaningfully reduced in size without compromisi
 Total memory = 176*2 = **352**
 
 <img src="\assets\eae\assignment4\8.png" style="zoom:80%;" />
+
+**1. background_color:**
+
+This represents the color data used for rendering the background (RGBA color values).
+
+Assuming `sColor` consists of 4 floating-point values (one each for `r`, `g`, `b`, and `a`), and each floating-point value (i.e., `float`) is 4 bytes:
+
+- **Memory for background_color** = 4 (components: r, g, b, a) * 4 bytes = **16 bytes**
+
+**2. constantData_frame:**
+
+This is likely a constant buffer that stores data needed for every frame, such as transformation matrices (view, projection), lighting parameters, or other frame-specific information. 
+
+This can vary based on the actual data being stored in the `sFrame` constant buffer format.
+
+**3. mesh_effect_pairs:**
+
+This vector stores pairs of references to `cMesh` and `cEffect` objects that need to be rendered for each frame.
+
+The memory usage here depends on:
+
+- **Number of mesh/effect pairs**.
+- **Size of each pair**: Each pair contains two references, one to a `cMesh*` and one to a `cEffect*`. References are typically the same size as pointers (4 bytes on 32-bit systems, 8 bytes on 64-bit systems).
