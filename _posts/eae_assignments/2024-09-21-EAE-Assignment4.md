@@ -73,5 +73,8 @@ The vertex and index buffers are essential components for rendering a mesh. Each
 
 This class, `cEffect`, cannot be meaningfully reduced in size without compromising functionality or performance.The current member variables are already laid out efficiently for most architectures. Pointers (such as `m_vertexShader` and `m_fragmentShader`) are likely aligned optimally for the system, ensuring no unnecessary padding is introduced. While slight reordering might theoretically reduce padding, the potential gains would be marginal and platform-specific. Any attempt to reduce memory usage further by reordering the members would risk breaking alignment requirements and could lead to performance penalties on certain hardware.
 
-## Optional Challenges
+## Total memory of my Graphics project's data to render frames
 
+Total memory = 176*2 = **352**
+
+<img src="\assets\eae\assignment4\8.png" style="zoom:80%;" />
