@@ -25,6 +25,20 @@ tags:
 - When I press "left arrow key", the second mesh will not be drawn.
 - When I press "right arrow key", the second mesh will be bind to the animated color effect.
 
+## Three screenshots of my game running
+
+**default state:**
+
+<img src="\assets\eae\assignment4\1.png" style="zoom:50%;" />
+
+**missing a mesh:**
+
+<img src="\assets\eae\assignment4\2.png" style="zoom:50%;" />
+
+**a mesh using a different effect:**
+
+<img src="\assets\eae\assignment4\3.png" style="zoom:50%;" />
+
 
 
 ## Optional Challenges
