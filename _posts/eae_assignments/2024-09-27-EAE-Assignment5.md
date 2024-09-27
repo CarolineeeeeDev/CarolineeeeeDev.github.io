@@ -76,13 +76,41 @@ The `GameObject` class extends `cRenderableObject` to include additional functio
 
 ## Interface being used for submitting game objects to be rendered
 
+```c++
+void GameObject::SubmitDataForRendering(const float i_elapsedSecondCount_sinceLastSimulationUpdate)
+{
+    cRenderableObject::SubmitForRendering(m_mesh,m_effect);
+    Graphics::UpdateDrawCall(RigidBodyState.PredictFutureTransform(i_elapsedSecondCount_sinceLastSimulationUpdate));
+}
+```
 
+**`cRenderableObject::SubmitForRendering(m_mesh, m_effect)`**:
+
+- This utilizes the `SubmitForRendering` method from the base class (`cRenderableObject`) to pass rendering-specific data, such as `m_mesh` and `m_effect`, to the graphics system. This abstraction makes it easy for the game programmer to specify what mesh and effect (shader) to use when rendering the game object, without having to deal with lower-level graphics API details.
+
+**`Graphics::UpdateDrawCall(RigidBodyState.PredictFutureTransform(i_elapsedSecondCount_sinceLastSimulationUpdate))`**:
+
+- This ensures that the graphics system is updated with the object's predicted transform, which is calculated using the `RigidBodyState`. The `PredictFutureTransform` function takes into account the time elapsed since the last simulation update, providing a smooth transition and preventing visual stuttering or snapping that might occur if the graphics and physics systems were not synchronized.
 
 ## The size of data needed for each draw call
 
+```c++
+struct sDataRequiredToRenderAFrame
+{
+	sColor background_color;
+	eae6320::Graphics::ConstantBufferFormats::sFrame constantData_frame;
+	std::vector<std::pair<eae6320::Graphics::cMesh*&, eae6320::Graphics::cEffect*&>> mesh_effect_pairs;
+	std::vector<eae6320::Graphics::ConstantBufferFormats::sDrawCall> constantData_drawcalls;
+};
+```
 
+- Each draw call in `mesh_effect_pairs` adds **16 bytes** per pair.
+- Each draw call in `constantData_drawcalls` adds **64 bytes**.
 
-
+The actual memory requirements for each draw call would be influenced by the number of elements stored in the `mesh_effect_pairs` and `constantData_drawcalls` vectors. 
 
 ## Why extrapolation/prediction is necessary
 
+During each frame render, the graphics system uses the most recent simulation data to predict where objects should be, based on their current velocity, acceleration, or other properties. This is done by calculating the position of each object at a future point in time, relative to the last simulation update.
+
+Extrapolation is necessary in rendering with your engine to handle the discrepancy between simulation update rates and rendering rates. By predicting future positions of objects based on their current state, the engine ensures **smooth transitions and consistent visuals**, even when the simulation and rendering do not run at the same frequency. This results in a more polished and responsive visual experience for players.
