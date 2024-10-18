@@ -39,4 +39,13 @@ In the image above, you can see Visual Studio attached to my plug-in. The yellow
 
 - **Error Logging**: If the limit is exceeded, an error message is logged, and the user is notified rather than causing a crash.
 
-<img src="\assets\eae\assignment7\2.png" style="zoom:50%;" />
+## Engine Limitation Explanation
+
+The hard limit on the number of vertices a model can have in our engine is primarily due to performance constraints and memory management. Specifically, here are the reasons behind this limitation:
+
+1. **Performance Constraints:**
+   - Rendering a high number of vertices can significantly impact the frame rate, especially on lower-end hardware. Each vertex requires processing during the rendering pipeline, and exceeding a certain threshold can lead to performance degradation.
+2. **Memory Management:**
+   - Each vertex consumes memory, and the engine must allocate and manage this memory efficiently. A high vertex count can lead to increased memory usage, which may exceed available resources, especially on platforms with limited memory capacity.
+3. **Rendering Pipeline Limitations:**
+   - The rendering engine may have specific architectural constraints that limit how many vertices can be processed in a single draw call. Exceeding this limit could necessitate breaking the model into smaller chunks, leading to additional overhead.
