@@ -52,11 +52,11 @@ The built binary geometry files should be the same for different platforms. Usin
 
 ### size (kb)
 
-gear.mesh (human-readable file) : 19kb
+gear.mesh (human-readable file) : **19kb**
 
 <img src="\assets\eae\assignment8\5.png" style="zoom:50%;" />
 
-gear.mesh (binary file) : 8kb
+gear.mesh (binary file) : **8kb**
 
 <img src="\assets\eae\assignment8\6.png" style="zoom:50%;" />
 
