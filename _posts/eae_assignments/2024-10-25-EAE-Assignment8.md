@@ -54,11 +54,11 @@ The built binary geometry files should be the same for different platforms. Usin
 
 gear.mesh (human-readable file) : **19kb**
 
-<img src="\assets\eae\assignment8\5.png" style="zoom:50%;" />
+<img src="\assets\eae\assignment8\6.png" style="zoom:50%;" />
 
 gear.mesh (binary file) : **8kb**
 
-<img src="\assets\eae\assignment8\6.png" style="zoom:50%;" />
+<img src="\assets\eae\assignment8\5.png" style="zoom:50%;" />
 
 ### time (ms)
 
