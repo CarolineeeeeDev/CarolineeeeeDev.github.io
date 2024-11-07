@@ -18,5 +18,5 @@ This week, I focused on adding controller support to my player input system:
 
 Here's the video of controller support for my game : 
 
-<video src="\assets\eae\assignment10\assignment10.mp4" style="zoom:100%;" />
+<img src="\assets\eae\assignment10\assignment10.gif" style="zoom:100%;" />
 
