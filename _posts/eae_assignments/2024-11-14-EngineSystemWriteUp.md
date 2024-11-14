@@ -46,19 +46,12 @@ The updated input system enables the following:
 To integrate the player input system into your own game projects, follow these steps:
 
 1. **Download and Setup**:
-
    - Download the provided ZIP file containing the code.
    - Extract the files and add the static library project to your solution for the engine.
-
 2. **System Variable Setup**:
-
    - Ensure the correct location of `SDK.dll` is set in your system variables to avoid errors during startup.
    - Configure Visual Studio's include paths and library directories to accommodate the SDL integration if using controller support.
-
-   <img src="\assets\eae\assignment10\3.png" style="zoom:50%;" />
-
 3. **Integration in Your Game Loop**:
-
    - Utilize methods like `IsActionPressed("Jump")` or `GetAxis("Move")` to handle input queries during gameplay.
    - Update player and camera positions based on the input states retrieved from the `InputManager`.
 
@@ -87,12 +80,15 @@ Throughout the project, I applied multiple concepts learned this semester, inclu
 A ZIP file containing the source code, the static library project for the runtime engine, and the executable for the asset builder is available [here](#). Below are instructions on setting it up:
 
 1. **Download the ZIP file** and extract it to your project directory.
+
 2. **Add the static library project** to your solution.
+
 3. **Set up path variables**.
 
-<img src="\assets\eae\assignment11\2.png" style="zoom:50%;" />
+   <img src="\assets\eae\assignment10\3.png" style="zoom:50%;" />
 
-1. **Follow the input configuration guide** included in the write-up to set up your game's specific input needs.
-2. **Test and adjust** sensitivity settings, dead zones, and key bindings to fit your project requirements.
+4. **Follow the input configuration guide** included in the write-up to set up your game's specific input needs.
+
+5. **Test and adjust** sensitivity settings, dead zones, and key bindings to fit your project requirements.
 
 By following these steps, you should be able to utilize the player input system effectively in your final game projects. For any additional guidance, feel free to consult the in-code comments or reach out for support.
