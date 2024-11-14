@@ -28,6 +28,8 @@ The updated input system enables the following:
 
      <img src="\assets\eae\assignment11\1.png" style="zoom:50%;" />
 
+     <img src="\assets\eae\assignment11\3.png" style="zoom:50%;" />
+
 2. **Enhanced Player and Camera Control**:
 
    - Input states are tracked frame-by-frame, ensuring responsive and smooth interactions.
