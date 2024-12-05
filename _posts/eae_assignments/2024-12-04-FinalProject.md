@@ -14,7 +14,7 @@ tags:
 
 ## Gif of my game
 
-<img src = "assets/eae/Final/final.gif">
+<img src="\assets\eae\Final\final.gif" />
 
 ## Game Concept and Features
 
