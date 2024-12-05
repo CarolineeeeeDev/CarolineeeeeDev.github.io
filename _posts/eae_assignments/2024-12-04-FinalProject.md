@@ -12,9 +12,9 @@ tags:
     - English
 ---
 
-## Video of my game
+## Gif of my game
 
-<iframe width="560" height="315" src="https://youtu.be/YQbp57ZbLWc"  frameborder="0" allowfullscreen></iframe>
+<img src = "assets/eae/Final/final.gif">
 
 ## Game Concept and Features
 
