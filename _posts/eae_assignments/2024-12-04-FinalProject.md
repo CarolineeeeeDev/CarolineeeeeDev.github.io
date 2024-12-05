@@ -36,6 +36,9 @@ I worked with Liu Yan's **Collision System** to handle obstacle interactions in 
 - **Ease of Integration**: The integration process was relatively straightforward. Liu Yan's system had clear documentation and was modular enough to plug into my engine with minimal adjustments.
 - **Interface Usability**: The interface was intuitive and easy to use. The collision detection events were easy to hook into my gameplay logic, making it seamless to implement speed penalties for colliding players.
 - **What I Learned**: Working with Liu Yan's system gave me a better understanding of how collision detection is implemented in game engines. I particularly appreciated how the system decouples collision detection from gameplay, making it versatile for different types of games.
+
+<img src="\assets\eae\Final\2.png" style="zoom:50%;" />
+
 - **Suggestions**: One improvement could be adding more examples or usage cases in the documentation to help users quickly understand how to customize the system for unique scenarios.
 
 ## Reflection on the Semester
