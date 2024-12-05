@@ -12,12 +12,9 @@ tags:
     - English
 ---
 
-## Gif of my game
+## Video of my game
 
-<video controls width="600">
-  <source src="../../assets/eae/Final/final.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe width="560" height="315" src="https://youtu.be/YQbp57ZbLWc"  frameborder="0" allowfullscreen></iframe>
 
 ## Game Concept and Features
 
